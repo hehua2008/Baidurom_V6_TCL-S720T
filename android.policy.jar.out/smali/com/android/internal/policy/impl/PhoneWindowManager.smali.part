@@ -1,0 +1,10 @@
+
+.method public setExtraDisplayDevicePlugIn(ZZ)V
+    .locals 0
+    .parameter "plugin"
+    .parameter "goHome"
+
+    .prologue
+    .line 5213
+    return-void
+.end method
