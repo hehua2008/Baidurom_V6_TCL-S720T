@@ -428,7 +428,7 @@
 
     sget-object v0, Landroid/content/ThemeDefine;->iconReplaceMap:Ljava/util/HashMap;
 
-    const-string v1, "com.duoku.coolreader"
+    const-string v1, "com.chaozh.iReaderFree"
 
     const v2, #drawable@ic_launcher_baidureader#t
 
@@ -479,18 +479,6 @@
     const-string v1, "com.huluxia.gametools"
 
     const v2, #drawable@ic_launcher_huluxia_gametools#t
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Landroid/content/ThemeDefine;->iconReplaceMap:Ljava/util/HashMap;
-
-    const-string v1, "com.chaozh.iReaderFree"
-
-    const v2, #drawable@ic_launcher_ireader#t
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

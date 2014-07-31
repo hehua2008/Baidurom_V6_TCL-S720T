@@ -859,7 +859,7 @@
     .line 417
     sget-object v4, Lcom/android/server/power/ShutdownThread;->pd:Landroid/app/ProgressDialog;
 
-    const v6, #string@power_off#t
+    const v6, 0x10400db
 
     invoke-virtual {p0, v6}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -870,7 +870,7 @@
     .line 418
     sget-object v4, Lcom/android/server/power/ShutdownThread;->pd:Landroid/app/ProgressDialog;
 
-    const v6, #string@shutdown_progress#t
+    const v6, 0x10400df
 
     invoke-virtual {p0, v6}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -1947,7 +1947,7 @@
 
     move-result-object v7
 
-    const v8, #integer@config_longPressOnPowerBehavior#t
+    const v8, 0x10e0017
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1959,13 +1959,13 @@
 
     if-eqz v7, :cond_4
 
-    const v3, #string@reboot_safemode_confirm#t
+    const v3, 0x10400e3
 
     .local v3, resourceId1:I
     :goto_1
     if-ne v1, v10, :cond_6
 
-    const v4, #string@reboot_confirm_question#t
+    const v4, 0x1040554
 
     .local v4, resourceId2:I
     :goto_2
@@ -1986,7 +1986,7 @@
 
     if-eqz v7, :cond_8
 
-    const v6, #string@reboot_safemode_title#t
+    const v6, 0x10400e2
 
     .line 228
     .local v6, titleId1:I
@@ -2075,7 +2075,7 @@
 
     move-result-object v7
 
-    const v8, #string@yes#t
+    const v8, 0x1040013
 
     new-instance v9, Lcom/android/server/power/ShutdownThread$2;
 
@@ -2085,7 +2085,7 @@
 
     move-result-object v7
 
-    const v8, #string@no#t
+    const v8, 0x1040009
 
     new-instance v9, Lcom/android/server/power/ShutdownThread$1;
 
@@ -2179,12 +2179,12 @@
     :cond_4
     if-ne v1, v10, :cond_5
 
-    const v3, #string@shutdown_confirm_question#t
+    const v3, 0x10400e1
 
     goto/16 :goto_1
 
     :cond_5
-    const v3, #string@shutdown_confirm#t
+    const v3, 0x10400e0
 
     goto/16 :goto_1
 
@@ -2205,7 +2205,7 @@
     .line 225
     .restart local v2       #resourceId:I
     :cond_8
-    const v6, #string@power_off#t
+    const v6, 0x10400db
 
     goto/16 :goto_4
 
@@ -2248,7 +2248,7 @@
 
     invoke-direct {v8, p0}, Lcom/android/server/power/ShutdownThread$baidu_1;-><init>(Landroid/content/Context;)V
     
-    const v11, #string@yes#t
+    const v11, 0x1040013
 
     invoke-virtual {v7, v11, v8}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -2258,7 +2258,7 @@
 
     invoke-direct {v8}, Lcom/android/server/power/ShutdownThread$baidu_2;-><init>()V
     
-    const v11, #string@no#t
+    const v11, 0x1040009
 
     invoke-virtual {v7, v11, v8}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 

@@ -29022,6 +29022,17 @@
     throw v2
 .end method
 
+.method public closeSystemDialogsForQb()V
+    .locals 0
+
+    .prologue
+    .line 1127
+    invoke-virtual {p0}, Lcom/android/server/wm/WindowManagerService;->closeSystemDialogs()V
+
+    .line 1128
+    return-void
+.end method
+
 .method computeForcedAppOrientationLocked()I
     .locals 2
 

@@ -43,11 +43,11 @@ vendor_remove_dirs := app vendor/operator/app
 # Vendor apks you want to use
 #-----------------------------------------------------------------------------
 vendor_saved_apps := Bluetooth FMRadio MtkBt BasicDreams EngineerMode\
-		     HTMLViewer MusicFX Stk1 StkSelection\
-                     HotKnot HotKnotBeam InputDevices LiveWallpapers\
-                     MagicSmokeWallpapers NoiseField PhaseBeam Galaxy4\
+		     HTMLViewer MusicFX HotKnot\
+                     HotKnotBeam InputDevices LiveWallpapers\
+                     MediaProvider NoiseField PhaseBeam Galaxy4\
                      HoloSpiralWallpaper MTKLogger Emode\
-                     MediaProvider
+                     #MagicSmokeWallpapers Stk1 StkSelection
 
 ##############################################################################
 # Apks build from current project root directory
@@ -83,7 +83,7 @@ vendor_saved_apps := Bluetooth FMRadio MtkBt BasicDreams EngineerMode\
 # you need decode android.policy.jar to the project directory (use apktool d android.policy.jar) first
 # then you can make it by:   make android.policy
 #-----------------------------------------------------------------------------
-vendor_modify_jars := framework mediatek-framework mediatek-telephony-common secondary-framework services telephony-common
+vendor_modify_jars := framework mediatek-framework mediatek-telephony-common secondary-framework services telephony-common mediatek-common
 
 ##############################################################################
 # Directorys which you want to saved in baidu directory
@@ -98,7 +98,7 @@ vendor_modify_jars := framework mediatek-framework mediatek-telephony-common sec
 ##############################################################################
 # baidu_remove_apps: those baidu apk you want remove 
 #-----------------------------------------------------------------------------
-# baidu_remove_apps := BaiduUserFeedback.apk
+baidu_remove_apps := Lecai.apk
 
 ##############################################################################
 # baidu_modify_apps: which base the baidu's apk
@@ -117,7 +117,15 @@ baidu_modify_jars := android.policy
 #-----------------------------------------------------------------------------
 
 # hide the soft mainkeys
-# override_property += \
+VERSION := 53.31
+PHONE_VERSION := TCL-S720T_R_2.3.$(VERSION)
+override_property += \
+	ro.baidu.build.hardware=TCL S720T\
+	ro.product.manufacturer=TCL\
+	ro.build.display.id=${PHONE_VERSION}\
+	ro.build.version.incremental=${PHONE_VERSION}\
+	ro.custom.build.version=${PHONE_VERSION}\
+	ro.baidu.romer=静娴之霸王别姬
 #    qemu.hw.mainkeys=1
 
 ##############################################################################
